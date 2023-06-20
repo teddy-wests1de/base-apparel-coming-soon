@@ -19,15 +19,19 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-areas: "header" "hero" "main-content" "footer";
+  grid-template-areas:
+    "logo logo"
+    "hero hero"
+    "main main"
+    "footer footer";
   /* min-width: 300px; */
   gap: 0.5rem;
 }
 .logo {
-  grid-area: header;
+  grid-area: logo;
   margin: 3rem 1rem 1rem 1rem;
 }
-.hero-image {
+.hero-section {
   grid-area: hero;
 }
 .header {
@@ -47,7 +51,7 @@ body {
   text-align: center;
 }
 .main-content {
-  grid-area: main-content;
+  grid-area: main;
   margin: 2rem;
   max-width: 425px;
   font-size: 0.8rem;
@@ -91,10 +95,23 @@ footer {
 
 @media (min-width: 600px) {
   .wrapper {
-    grid-template-areas: "header hero" "main-content hero" "footer footer";
+    grid-template-areas: "logo hero" "main hero" "main hero" "footer footer";
   }
-  .hero-image {
-    background-image: url(./images/hero-desktop.jpg);
+  .logo {
+    grid-area: logo;
+  }
+  .hero-section {
     grid-area: hero;
   }
+  .main-content {
+    grid-area: main;
+  }
+  footer {
+    grid-area: footer;
+    margin-top: 2rem;
+  }
+  /* .hero-image {
+    background-image: url(./images/hero-desktop.jpg);
+    grid-area: hero;
+  } */
 }

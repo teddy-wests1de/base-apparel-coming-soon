@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
     <title>Frontend Mentor | Base Apparel coming soon page</title>
     <link rel="stylesheet" href="reset.css" />
 
@@ -24,12 +25,20 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- header section grid layout left top column -->
       <header class="logo">
         <img src="./images/logo.svg" alt="Base Apparel Logo" />
       </header>
-      <head class="hero-image">
+      <!-- end header section -->
+
+      <!-- hero section grid layout right column -->
+      <picture class="hero-section">
+        <source srcset="./images/hero-desktop.jpg" media="(min-width: 60rem)" />
         <img src="./images/hero-mobile.jpg" alt="Picture of a woman" />
-      </head>
+      </picture>
+      <!-- end hero section -->
+
+      <!-- main content grid layout left center columns -->
       <main class="main-content">
         <h1 class="header"><span>We're</span> coming soon</h1>
         <p class="text-copy">
@@ -51,6 +60,9 @@
           <span class="validation"></span>
         </form>
       </main>
+      <!-- end main content layout -->
+
+      <!-- footer content grid layout bottom columns -->
       <footer>
         <p class="attribution">
           Challenge by
@@ -59,7 +71,7 @@
           >. Coded by <a href="#">Your Name Here</a>.
         </p>
       </footer>
+      <!-- close footer content layout -->
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
