@@ -95,6 +95,7 @@ footer {
 
 @media (min-width: 600px) {
   .wrapper {
+    grid-template-columns: 60% 40%;
     grid-template-areas: "logo hero" "main hero" "main hero" "footer footer";
   }
   .logo {
