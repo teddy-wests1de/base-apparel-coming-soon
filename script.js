@@ -6,7 +6,7 @@ const error = document.querySelector('.error-icon');
 // console.log(emailInput.value);
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  if (emailInput.value != "") {
+  if (validEmail(emailInput.value)) {
     validateEmail.classList.add('hidden')
     error.classList.add('hidden')
     console.log(emailInput.value);
@@ -18,3 +18,8 @@ submitBtn.addEventListener("click", function (e) {
     emailInput.style.borderColor = "red";
   }
 });
+
+const validEmail = function (inputEmail) {
+  let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+  return regex.test(inputEmail)
+}
