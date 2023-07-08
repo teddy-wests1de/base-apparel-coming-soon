@@ -10,9 +10,11 @@ submitBtn.addEventListener("click", function (e) {
     validateEmail.classList.add('hidden')
     error.classList.add('hidden')
     console.log(emailInput.value);
+    emailInput.style.borderColor = "hsl(0, 88%, 77%)";
   } else {
     validateEmail.innerHTML = "Please provide a valid email";
     validateEmail.classList.remove('hidden')
     error.classList.remove('hidden')
+    emailInput.style.borderColor = "red";
   }
 });
