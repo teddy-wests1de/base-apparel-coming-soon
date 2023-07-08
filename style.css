@@ -4,8 +4,8 @@
 
   --dark-gray-red: hsl(0, 6%, 24%);
 
-  --gradient1: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
-  --gradient2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+  --gradient1: 135deg, hsl(0, 0%, 100%), hsl(0, 94%, 81%);
+  --gradient2: 135deg, hsl(0, 88%, 77%), hsl(0, 79%, 67%);
 }
 body {
   display: grid;
@@ -52,36 +52,55 @@ body {
 }
 .main-content {
   grid-area: main;
-  margin: 2rem;
+  margin: 1rem;
   max-width: 425px;
   font-size: 0.8rem;
 }
 .add-email {
+  position: relative;
   margin-top: 1.2rem;
-  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
 }
+.add-email i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 4.5rem;
+}
+.hidden {
+  display: none;
+}
 .email {
-  padding: 0.8rem;
+  padding: 0.7rem;
   color: var(--desat-red);
-  border-radius: 25px 0 0 25px;
+  border-radius: 25px;
   border: 1px solid var(--desat-red);
   width: 100%;
 }
 
 .submit {
+  position: absolute;
+  top: 0;
+  right: -35px;
   display: flex;
   justify-content: center;
-  padding: 0.8rem 1.8rem;
-  border-style: none;
   border-color: var(--desat-red);
   border-radius: 25px;
   transform: translateX(-50%);
   background: linear-gradient(var(--gradient2));
   box-shadow: 0 5px 20px rgba(174, 103, 103, 0.777);
+  padding: 0.7rem 1.7rem;
+  border-style: none;
 }
-
+.submit:hover {
+  background: linear-gradient(var(--gradient1));
+}
+.validation {
+  margin: .5rem 0 0 .5rem;
+  font-size: .75rem;
+  color: var(--soft-red);
+}
 footer {
   grid-area: footer;
 }
@@ -100,6 +119,7 @@ footer {
   }
   .logo {
     grid-area: logo;
+    max-width: 500px;
   }
   .hero-section {
     grid-area: hero;
@@ -107,12 +127,18 @@ footer {
   .main-content {
     grid-area: main;
   }
+  .header, .text-copy {
+    text-align: left;
+  }
+  .text-copy {
+    max-width: 375px;
+  }
+  .add-email {
+    max-width: 300px;
+  }
   footer {
     grid-area: footer;
     margin-top: 2rem;
   }
-  /* .hero-image {
-    background-image: url(./images/hero-desktop.jpg);
-    grid-area: hero;
-  } */
+
 }
